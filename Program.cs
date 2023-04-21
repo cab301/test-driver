@@ -6,34 +6,8 @@ class Program
 
     static void Main(string[] args)
     {
-        TestDriver.AddTestClass(typeof(Program));
+        TestDriver.AddTestClass(typeof(Program), typeof(ExampleTests));
         TestDriver.RunAllTests();
-        // int seed = (int)DateTime.Now.Ticks;
-        // Random number = new Random(seed);
-        // Random rnd = new Random(seed);
-        // int[] nums = new int[ARRAY_SIZE];
-        // for (int i = 0; i < ARRAY_SIZE; i++)
-        //     // randomly generate an integer beteen 0 and RAMDOM_MAX
-        //     nums[i] = rnd.Next(RANDOM_MAX);
-
-        // Console.Clear();
-        // Console.WriteLine();
-        // Console.WriteLine("before heap sorting:");
-        // for (int i = 0; i < ARRAY_SIZE; i++)
-        // {
-        //     Console.WriteLine(nums[i]);
-        // }
-
-        // HeapSort(nums);
-
-        // Console.WriteLine();
-        // Console.WriteLine("after heap sorting:");
-        // for (int i = 0; i < ARRAY_SIZE; i++)
-        // {
-        //     Console.WriteLine(nums[i]);
-        // }
-
-        // Console.ReadLine();
     }
 
     [Test("Test HeapSort with empty array")]

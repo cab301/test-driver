@@ -9,12 +9,12 @@ static class TestDriver
     static string testResult = "";
 
     /// <summary>
-    /// Add a test class to the list of classes to be tested.
+    /// Add a number of test classes to the list of classes to be tested.
     /// </summary>
-    /// <param name="testClass">The test class to add</param>
-    public static void AddTestClass(Type testClass)
+    /// <param name="testClasses">The test class to add</param>
+    public static void AddTestClass(params Type[] testClasses)
     {
-        testClasses.Add(testClass);
+        TestDriver.testClasses.AddRange(testClasses);
     }
 
     /// <summary>
