@@ -185,7 +185,7 @@ static class TestDriver
             Directory.CreateDirectory(path);
         }
         string fileName = $"{name.Replace(" ", "_")}";
-        string filePath = Path.Combine(path, fileName);
+        string filePath = Path.Combine(path, fileName + ".txt");
         using (StreamWriter writer = new StreamWriter(filePath))
         {
             writer.Write(testResult);
