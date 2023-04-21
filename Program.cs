@@ -156,6 +156,15 @@ class Program
         return new TestResult("[1,3,2,5,4]", "[5,4,2,3,1]", actualString, nums.Length == 5 && nums[0] == 5 && nums[1] == 4 && nums[2] == 2 && nums[3] == 3 && nums[4] == 1);
     }
 
+    [Test("Test MaxKeyDelete with heap of size 0")]
+    public TestResult TestMaxKeyDeleteSizeZero()
+    {
+        int[] nums = new int[]{};
+        MaxKeyDelete(nums, 0);
+        string actualString = "[" + string.Join(",", nums) + "]";
+        return new TestResult("[]", "[]", actualString, nums.Length == 0);
+    }
+
     [Test("Test MaxKeyDelete with heap of size 1")]
     public TestResult TestMaxKeyDeleteSizeOne()
     {
