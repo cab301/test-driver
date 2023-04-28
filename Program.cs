@@ -119,15 +119,24 @@ class Program
     [Test("Test HeapBottomUp with five elements, sorted in random order")]
     public TestResult TestHeapBottomUpFiveElements()
     {
-        int[] nums = new int[5];
-        nums[0] = 1;
-        nums[1] = 3;
-        nums[2] = 2;
-        nums[3] = 5;
-        nums[4] = 4;
+        // Define input data
+        int[] nums = new int[5] { 1, 3, 2, 5, 4 };
+        // Call the tested method
         HeapBottomUp(nums);
+        // Check the result
         string actualString = "[" + string.Join(",", nums) + "]";
-        return new TestResult("[1,3,2,5,4]", "[5,4,2,3,1]", actualString, nums.Length == 5 && nums[0] == 5 && nums[1] == 4 && nums[2] == 2 && nums[3] == 3 && nums[4] == 1);
+        // Format the input data, expected result and actual result for display
+        // and defining a pass/fail condition
+        return new TestResult(
+            Input: "[1,3,2,5,4]", 
+            Expected: "[5,4,2,3,1]", 
+            Actual: actualString, 
+            Passed: nums.Length == 5 
+                && nums[0] == 5 
+                && nums[1] == 4 
+                && nums[2] == 2 
+                && nums[3] == 3 
+                && nums[4] == 1);
     }
 
     [Test("Test MaxKeyDelete with heap of size 0")]
