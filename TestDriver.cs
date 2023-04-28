@@ -111,16 +111,16 @@ static class TestDriver
                 {
                     result = new TestResult(
                         attribute.DisplayName, 
-                        $"Method threw an exception: ({e.GetType()}) with message {e.InnerException.Message}",
                         "No exception should be thrown",
+                        $"Method threw an exception: ({e.GetType()}) with message {e.InnerException.Message}",
                         false);
                 }
                 catch (Exception e)
                 {
                     result = new TestResult(
                         attribute.DisplayName, 
-                        $"An exception was thrown: ({e.GetType()}) with message {e.Message}",
                         "No exception should be thrown",
+                        $"An exception was thrown: ({e.GetType()}) with message {e.Message}",
                         false);
                 }
 

@@ -1,0 +1,62 @@
+╔═════ExampleTests+ExampleADTTests══════╗
+╟──────Test Book Constructor Valid──────╢
+> Input:    The Hobbit
+> Expected: J.R.R. Tolkien
+> Actual:   The Hobbit
+╟────────────────Passed─────────────────╢
+╠═══════════════════════════════════════╣
+╟───Test Book Constructor Empty Title───╢
+> Input:    Book with empty title
+> Expected: An exception of type System.ArgumentException should be thrown
+> Actual:   An exception of type System.ArgumentException was thrown
+╟────────────────Passed─────────────────╢
+╠═══════════════════════════════════════╣
+╟──Test Book Constructor Empty Author───╢
+> Input:    Book with empty author
+> Expected: An exception of type System.ArgumentException should be thrown
+> Actual:   An exception of type System.ArgumentException was thrown
+╟────────────────Passed─────────────────╢
+╠═══════════════════════════════════════╣
+╟──Test Book Constructor Negative Year──╢
+> Input:    Book with negative year
+> Expected: An exception of type System.ArgumentException should be thrown
+> Actual:   An exception of type System.ArgumentException was thrown
+╟────────────────Passed─────────────────╢
+╠═══════════════════════════════════════╣
+╟────Test Book Constructor Zero Year────╢
+> Input:    Book with zero year
+> Expected: An exception of type System.ArgumentException should be thrown
+> Actual:   No exception was thrown
+╟────────────────Failed─────────────────╢
+╠═══════════════════════════════════════╣
+╟───Test Book Constructor Null Title────╢
+> Input:    Book with null title
+> Expected: An exception of type System.ArgumentNullException should be thrown
+> Actual:   An exception of type System.ArgumentNullException was thrown
+╟────────────────Passed─────────────────╢
+╠═══════════════════════════════════════╣
+╟───Test Book Constructor Null Author───╢
+> Input:    Book with null author
+> Expected: An exception of type System.ArgumentNullException should be thrown
+> Actual:   An exception of type System.ArgumentNullException was thrown
+╟────────────────Passed─────────────────╢
+╠═══════════════════════════════════════╣
+╟──────────Test Book ToString───────────╢
+> Input:    The Hobbit by J.R.R. Tolkien (1937)
+> Expected: The Hobbit by J.R.R. Tolkien (1937)
+> Actual:   The Hobbit by J.R.R. Tolkien (1937)
+╟────────────────Passed─────────────────╢
+╠═══════════════════════════════════════╣
+╠═════════════Test Summary══════════════╣
+Passed:
+> Test Book Constructor Valid
+> Test Book Constructor Empty Title
+> Test Book Constructor Empty Author
+> Test Book Constructor Negative Year
+> Test Book Constructor Null Title
+> Test Book Constructor Null Author
+> Test Book ToString
+─────────────────────────────────────────
+Failed:
+> Test Book Constructor Zero Year
+╙─────────────7 / 8 passed──────────────╜

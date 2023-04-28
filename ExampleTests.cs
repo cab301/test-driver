@@ -9,7 +9,7 @@ public class ExampleTests
     [Test("Test 1 + 1 = 3 should be false")]
     public TestResult TestAdditionFail()
     {
-        return new TestResult("1 + 1", "3", "2", 1 + 1 == 3);
+        return new TestResult("1 + 1", "3", "2", 1 + 1 != 3);
     }
 
     public class ExampleADTTests
